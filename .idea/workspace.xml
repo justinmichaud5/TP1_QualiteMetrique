@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="272c8f5d-179b-4943-84e0-893009bd10d7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Method.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ParsedClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TP1/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TP1/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TP1/Parser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TP1/Parser.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Method.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Method.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,21 +77,29 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" key="#Project_Structure/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600201127526" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1600219599841">
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1600286448871">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600219599841" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1600219599840">
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600286448871" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1600285531359">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600219599840" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1600219599840">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600285531359" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1600285531359">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600219599840" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1600219599840">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600285531359" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1600285531359">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600219599840" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600285531359" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1600285531359">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600285531359" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1600282380361">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600282380361" />
   </component>
 </project>

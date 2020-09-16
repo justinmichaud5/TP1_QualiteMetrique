@@ -10,13 +10,17 @@ public class Main {
 
         // Valider le path
         String path = scanner.nextLine();
-        if (!path.endsWith(".java")) path = path + ".java";
         System.out.println("Path : " + path + "\n");
 
-
+        File[] fileArray = new File("test_files").listFiles();
+        for(File f : fileArray) {
+            if(f.getName().endsWith(".java")) // to deal with the .txt files.
+            {
+               Parser.parse(f); // to read the files
+            }
+        }
         // Parser (Partie 1)
         // S'occupe de compter les lignes ciblees
-        Parser.parse(path);
     }
 
 }
