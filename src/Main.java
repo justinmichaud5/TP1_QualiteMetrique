@@ -12,11 +12,11 @@ public class Main {
         String path = scanner.nextLine();
         if (!path.endsWith(".java")) path = path + ".java";
         System.out.println("Path : " + path + "\n");
-        File file = new File(path);
+
 
         // Parser (Partie 1)
         // S'occupe de compter les lignes ciblees
-        Parser.parse(file);
+        Parser.parse(path);
     }
 
 }

@@ -2,42 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="272c8f5d-179b-4943-84e0-893009bd10d7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Parser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_files/Active.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_files/Automate2D.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_files/Block.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_files/Chest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_files/Exit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_files/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_files/LegendOfZoe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_files/Level.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_files/LevelGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_files/Messages.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_files/Monster.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_files/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_files/Paire.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_files/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_files/Position.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_files/Wall.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Method.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TP1/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TP1/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TP1/Parser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TP1/Parser.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/src/Active.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/src/Automate2D.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/src/Block.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/src/Chest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/src/Exit.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/src/Item.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/src/LegendOfZoe.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/src/Level.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/src/LevelGenerator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/src/Messages.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/src/Monster.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/src/Node.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/src/Paire.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/src/Player.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/src/Position.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/src/Wall.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,21 +76,21 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" key="#Project_Structure/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600201127526" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1600203926180">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1600219599841">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600203926180" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1600203926179">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600219599841" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1600219599840">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600203926179" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1600203926179">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600219599840" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1600219599840">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600203926179" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1600203926179">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600219599840" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1600219599840">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600203926179" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1600219599840" />
   </component>
 </project>
