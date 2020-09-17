@@ -35,7 +35,7 @@ public class ParsedClass {
         return classCloc;
     }
 
-    public double getDc() {
+    public double getClassDc() {
         return ((double) this.classCloc) / this.classLoc;
     }
 }

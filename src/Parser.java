@@ -88,6 +88,7 @@ public class Parser {
                 }
             }
 
+            /*
             System.out.println("---  CLASS  ---");
             System.out.println(className + "_LOC : " + Integer.toString(classLoc));
             System.out.println(className + "_CLOC : " + Integer.toString(classCloc));
@@ -99,6 +100,7 @@ public class Parser {
                 System.out.println(m.getName() + "_CLOC : " + Integer.toString(m.getCloc()));
                 System.out.println(m.getName() + "_DC : " + Double.toString(m.getDc()) + "\n");
             }
+             */
 
 
 
