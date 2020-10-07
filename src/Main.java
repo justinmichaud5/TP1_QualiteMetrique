@@ -15,7 +15,7 @@ public class Main {
 
         String path;
         if (args.length == 0) {
-            // Initliasation du projet
+            // Initialisation du projet
             Scanner scanner = new Scanner(System.in);
             System.out.println("Enter relative path to the java file to scan");
 
@@ -84,6 +84,10 @@ public class Main {
                         methodCsvWriter.append(pc.getClassName());
                         methodCsvWriter.append(",");
                         methodCsvWriter.append(m.getName());
+                        if(m.getArguments().compareTo("") != 0){
+                            methodCsvWriter.append("_");
+                            methodCsvWriter.append(m.getArguments());
+                        }
                         methodCsvWriter.append(",");
                         methodCsvWriter.append(Integer.toString(m.getLoc()));
                         methodCsvWriter.append(",");

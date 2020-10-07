@@ -20,6 +20,7 @@ public class Parser {
         int classCloc = 0;
 
         String methodName = "";
+        String methodArgs = "";
         int methodLoc = 0;
         int methodCloc = 0;
 
@@ -43,6 +44,17 @@ public class Parser {
                 if (!inComments && m.find() && nextLine.contains("(") && nextLine.contains(")")
                         && nextLine.charAt(nextLine.length() - 1) != ';') {
                     String[] splits = nextLine.split("[(]");
+                    splits[1] = splits[1].replaceAll(",\\s+",",");
+                    String[] argsSplit = splits[1].split(",");
+
+                    if(splits[1].charAt(0) != ')') {
+                        for (int i = 0; i < argsSplit.length; i++) {
+                            methodArgs += argsSplit[i].split(" ")[0];
+                            if (i != argsSplit.length - 1) {
+                                methodArgs += "_";
+                            }
+                        }
+                    }
 
                     inMethod = true;
                     methodName = splits[0].substring(splits[0].lastIndexOf(" ") + 1);
@@ -57,7 +69,8 @@ public class Parser {
                         else if (c == '}') {
                             curlyBracketCount--;
                             if (curlyBracketCount == 0) {
-                                methods.add(new Method(file.getPath(), className, methodName, methodLoc, methodCloc));
+                                methods.add(new Method(file.getPath(), className, methodName, methodArgs, methodLoc, methodCloc));
+                                methodArgs = "";
                                 inMethod = false;
                                 multilineCommentCount = 0;
                             }
