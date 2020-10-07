@@ -33,8 +33,8 @@ public class Main {
             FileWriter methodCsvWriter = new FileWriter("methodes.csv");
 
             // Titre des colonnes
-            classCsvWriter.append("chemin,class,classe_LOC,classe_CLOC,classe_DC\n");
-            methodCsvWriter.append("chemin,class,methode,methode_LOC,methode_CLOC,method_DC\n");
+            classCsvWriter.append("chemin,class,classe_LOC,classe_CLOC,classe_DC,WMC,classe_BC\n");
+            methodCsvWriter.append("chemin,class,methode,methode_LOC,methode_CLOC,method_DC,CC,method_BC\n");
 
             // Premiere appel a l'algo recursif
             parse(classCsvWriter, methodCsvWriter, path);
@@ -75,6 +75,10 @@ public class Main {
                     classCsvWriter.append(Integer.toString(pc.getClassCloc()));
                     classCsvWriter.append(",");
                     classCsvWriter.append(Double.toString(pc.getClassDc()));
+                    classCsvWriter.append(",");
+                    classCsvWriter.append(Integer.toString(pc.getClassWmc()));
+                    classCsvWriter.append(",");
+                    classCsvWriter.append(Double.toString(pc.getClassBc()));
                     classCsvWriter.append("\n");
 
                     for (Method m : pc.getMethods()) {
@@ -94,6 +98,10 @@ public class Main {
                         methodCsvWriter.append(Integer.toString(m.getCloc()));
                         methodCsvWriter.append(",");
                         methodCsvWriter.append(Double.toString(m.getDc()));
+                        methodCsvWriter.append(",");
+                        methodCsvWriter.append(Integer.toString(m.getCc()));
+                        methodCsvWriter.append(",");
+                        methodCsvWriter.append(Double.toString(m.getBc()));
                         methodCsvWriter.append("\n");
                     }
                 } else if (!f.getName().contains(".")){

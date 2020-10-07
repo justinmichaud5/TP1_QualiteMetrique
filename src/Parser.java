@@ -15,6 +15,7 @@ public class Parser {
         ArrayList<Method> methods = new ArrayList<>();
         boolean inComments = false;
         boolean inMethod = false;
+        boolean inSwitch = false;
         String className = file.getName().substring(0, file.getName().indexOf("."));
         int classLoc = 0;
         int classCloc = 0;
@@ -23,6 +24,7 @@ public class Parser {
         String methodArgs = "";
         int methodLoc = 0;
         int methodCloc = 0;
+        int methodCC = 1;
 
         int curlyBracketCount = 0;
         int multilineCommentCount = 0;
@@ -58,7 +60,8 @@ public class Parser {
 
                     inMethod = true;
                     methodName = splits[0].substring(splits[0].lastIndexOf(" ") + 1);
-                    methodLoc = 1;
+                    methodLoc = multilineCommentCount++;
+                    methodCC = 1;
                     methodCloc = multilineCommentCount;
                 }
 
@@ -69,7 +72,7 @@ public class Parser {
                         else if (c == '}') {
                             curlyBracketCount--;
                             if (curlyBracketCount == 0) {
-                                methods.add(new Method(file.getPath(), className, methodName, methodArgs, methodLoc, methodCloc));
+                                methods.add(new Method(file.getPath(), className, methodName, methodArgs, methodLoc, methodCloc, methodCC));
                                 methodArgs = "";
                                 inMethod = false;
                                 multilineCommentCount = 0;
@@ -86,14 +89,26 @@ public class Parser {
 
                 // Comptage
                 if (!nextLine.contains("//") && !inComments) {
-                    if (inMethod) methodLoc++;
+                    if (inMethod){
+
+                        methodLoc++;
+                    }
                     classLoc++;
                 } else {
                     if (inMethod) methodCloc++;
                     classCloc++;
                 }
 
-                if (inComments) multilineCommentCount++;
+                if (inComments){
+                    multilineCommentCount++;
+                } else if (inMethod){
+                    nextLine = nextLine.replaceAll("\\s+", "");
+
+                    if (nextLine.startsWith("if(") || nextLine.contains("elseif(") || nextLine.contains("while(") ||
+                            nextLine.contains("for(") ||(nextLine.startsWith("case") && nextLine.contains(":"))) {
+                        methodCC++;
+                    }
+                }
 
                 // Fin d'un commentaire multi-lignes
                 if (nextLine.contains("*/")) {

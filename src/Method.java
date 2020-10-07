@@ -8,6 +8,7 @@ public class Method {
     private int loc;
     private int cloc;
     private int cc;
+    private double dc;
 
     public Method(String path, String className, String name, String arguments, int loc, int cloc, int cc) {
         this.path = path;
@@ -17,6 +18,7 @@ public class Method {
         this.loc = loc;
         this.cloc = cloc;
         this.cc = cc;
+        this.dc = ((double) this.cloc) / this.loc;
     }
 
     public String getPath() {
@@ -40,7 +42,7 @@ public class Method {
     }
 
     public double getDc() {
-        return ((double) this.cloc) / this.loc;
+        return dc;
     }
 
     public String getArguments() {
@@ -49,5 +51,9 @@ public class Method {
 
     public int getCc() {
         return cc;
+    }
+
+    public double getBc() {
+        return dc/cc;
     }
 }

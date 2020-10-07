@@ -4,8 +4,10 @@ public class ParsedClass {
     private String path;
     private ArrayList<Method> methods;
     private String className;
-    private int classLoc = 0;
-    private int classCloc = 0;
+    private int classLoc;
+    private int classCloc;
+    private double classDc;
+    private int classWmc;
 
     public ParsedClass(String path, ArrayList<Method> methods, String className, int classLoc, int classCloc) {
         this.path = path;
@@ -13,6 +15,12 @@ public class ParsedClass {
         this.className = className;
         this.classLoc = classLoc;
         this.classCloc = classCloc;
+        this.classDc = ((double) this.classCloc) / this.classLoc;
+        this.classWmc = 0;
+
+        for (Method m : this.methods){
+            this.classWmc += m.getCc();
+        }
     }
 
     public String getPath() {
@@ -36,6 +44,14 @@ public class ParsedClass {
     }
 
     public double getClassDc() {
-        return ((double) this.classCloc) / this.classLoc;
+        return classDc;
+    }
+
+    public int getClassWmc() {
+        return classWmc;
+    }
+
+    public double getClassBc() {
+        return classDc/classWmc;
     }
 }
