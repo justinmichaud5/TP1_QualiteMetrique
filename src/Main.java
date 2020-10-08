@@ -13,6 +13,14 @@ public class Main {
      */
     public static void main (String[] args) {
 
+        /* uncomment to run tests
+        MethodTest test = new MethodTest();
+        test.testAttributes();
+
+        ParsedClassTest test2 = new ParsedClassTest();
+        test2.testAttributes();
+        */
+
         String path;
         if (args.length == 0) {
             // Initialisation du projet
