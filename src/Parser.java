@@ -128,7 +128,7 @@ public class Parser {
                 }
 
                 // Reinitialise le compte de la javadoc lorsqu'on passe aux autres lignes
-                if(rightAfterDoc){
+                if(rightAfterDoc && !nextLine.startsWith("@")){
                     multilineCommentCount = 0;
                     rightAfterDoc = false;
                 }
