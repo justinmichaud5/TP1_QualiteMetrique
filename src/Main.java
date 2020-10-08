@@ -20,6 +20,9 @@ public class Main {
 
         ParsedClassTest test2 = new ParsedClassTest();
         test2.testAttributes();
+
+        ParserTest test3 = new ParserTest();
+        test3.testBasicParse();
         */
 
         String path;
