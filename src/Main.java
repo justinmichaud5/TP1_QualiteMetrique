@@ -34,7 +34,7 @@ public class Main {
 
             // Titre des colonnes
             classCsvWriter.append("chemin,class,classe_LOC,classe_CLOC,classe_DC,WMC,classe_BC\n");
-            methodCsvWriter.append("chemin,class,methode,methode_LOC,methode_CLOC,method_DC,CC,method_BC\n");
+            methodCsvWriter.append("chemin,class,methode,methode_LOC,methode_CLOC,methode_DC,CC,methode_BC\n");
 
             // Premiere appel a l'algo recursif
             parse(classCsvWriter, methodCsvWriter, path);
