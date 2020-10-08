@@ -13,7 +13,8 @@ public class Main {
      */
     public static void main (String[] args) {
 
-        /* uncomment to run tests
+        //  uncomment to run tests, make sure to run with -ea to enable assertions
+        /*
         MethodTest test = new MethodTest();
         test.testAttributes();
 
