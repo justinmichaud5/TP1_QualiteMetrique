@@ -15,7 +15,7 @@ public class Parser {
         ArrayList<Method> methods = new ArrayList<>();
         boolean inComments = false;
         boolean inMethod = false;
-        boolean inSwitch = false;
+        boolean rightAfterDoc = false;
         String className = file.getName().substring(0, file.getName().indexOf("."));
         int classLoc = 0;
         int classCloc = 0;
@@ -43,6 +43,10 @@ public class Parser {
                 // Cas Ligne Vide || Case Commentaire Vide
                 if (nextLine.equals("") || (inComments && nextLine.equals("*"))) continue;
 
+                // Si la ligne n'est pas vide, c'est une ligne de code de la classe
+                classLoc++;
+
+                // Identification du debut d'une methode
                 if (!inComments && m.find() && nextLine.contains("(") && nextLine.contains(")")
                         && nextLine.charAt(nextLine.length() - 1) != ';') {
                     String[] splits = nextLine.split("[(]");
@@ -60,12 +64,16 @@ public class Parser {
 
                     inMethod = true;
                     methodName = splits[0].substring(splits[0].lastIndexOf(" ") + 1);
-                    methodLoc = multilineCommentCount++;
-                    methodCC = 1;
                     methodCloc = multilineCommentCount;
+                    methodLoc = multilineCommentCount;
+                    methodCC = 1;
+                    multilineCommentCount = 0;
                 }
 
+                // La ligne est dans une méthode
                 if (inMethod) {
+                    methodLoc++;
+
                     for (int i = 0; i < nextLine.length(); i++) {
                         char c = nextLine.charAt(i);
                         if (c == '{') curlyBracketCount++;
@@ -88,17 +96,26 @@ public class Parser {
                 }
 
                 // Comptage
-                if (!nextLine.contains("//") && !inComments) {
+                // Si la ligne est une ligne de commentaire
+                if (nextLine.contains("//") || inComments){
+                    if (inMethod) {
+                        methodCloc++;
+                    }
+                    classCloc++;
+                }
+                /*if (!nextLine.contains("//") && !inComments) {
                     if (inMethod){
-
                         methodLoc++;
                     }
                     classLoc++;
-                } else {
-                    if (inMethod) methodCloc++;
+                } else { // Si nous sommes en commentaires
+                    if (inMethod) {
+                        methodCloc++;
+                    }
                     classCloc++;
-                }
+                }*/
 
+                // Cas d'un bloc de commentaire javadoc et calcul de CC
                 if (inComments){
                     multilineCommentCount++;
                 } else if (inMethod){
@@ -110,9 +127,16 @@ public class Parser {
                     }
                 }
 
+                // Reinitialise le compte de la javadoc lorsqu'on passe aux autres lignes
+                if(rightAfterDoc){
+                    multilineCommentCount = 0;
+                    rightAfterDoc = false;
+                }
+
                 // Fin d'un commentaire multi-lignes
                 if (nextLine.contains("*/")) {
                     inComments = false;
+                    rightAfterDoc = true;
                 }
             }
 
