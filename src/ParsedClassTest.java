@@ -1,6 +1,13 @@
 import java.util.ArrayList;
 
+/**
+ * Test la creation de classes et le calcul des evaluations plus avancees
+ */
 public class ParsedClassTest {
+
+    /**
+     * Execute le test de la classe ParsedClass
+     */
     public void testAttributes(){
         Method method_test = new Method("/", "class", "method", "int", 10, 5, 1 );
         ArrayList<Method> method_array = new ArrayList<>();

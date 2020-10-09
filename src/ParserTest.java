@@ -2,7 +2,14 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
+/**
+ * Test la creation de classes et le calcul des evaluations plus avancees
+ */
 public class ParserTest {
+
+    /**
+     * Execute le test de la classe ParsedClass
+     */
     public void testBasicParse(){
         String javaClass = "/**\n" +
                 " * Chest class represent the chest blocks in a level. Contains an item that is used when opened.\n" +
@@ -40,9 +47,8 @@ public class ParserTest {
             e.printStackTrace();
         }
 
-        Parser test = new Parser();
         File file = new File("Chest.java");
-        ParsedClass class1 = test.parse(file);
+        ParsedClass class1 = Parser.parse(file);
 
         assert class1.getClassName().compareTo("Chest") == 0;
         assert class1.getClassLoc() == 24;

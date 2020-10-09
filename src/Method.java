@@ -1,5 +1,8 @@
 import java.util.ArrayList;
 
+/**
+ *  Structure de donnees qui contient tous les informations perninantes aux methodes trouvee dans les fichiers java
+ */
 public class Method {
     private String path;
     private String className;
@@ -10,6 +13,17 @@ public class Method {
     private int cc;
     private double dc;
 
+    /**
+     * Constructeur d'une nouvelle methode
+     *
+     * @param path Chemin vers le fichier contenant la methode
+     * @param className Nom de la class auquelle la methode appartient
+     * @param name Nom de la methode
+     * @param arguments Le(s) type(s) de tous les arguments separes par des '_'
+     * @param loc Le nombre de ligne dans la methode
+     * @param cloc Le nombre de ligne de commentaire dans la methode
+     * @param cc La valeur de la complexite cyclomatique
+     */
     public Method(String path, String className, String name, String arguments, int loc, int cloc, int cc) {
         this.path = path;
         this.className = className;

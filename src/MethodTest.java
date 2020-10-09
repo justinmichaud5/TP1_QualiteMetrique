@@ -1,5 +1,11 @@
+/**
+ * Test la creation de methodes et le calcul des evaluations plus avancees
+ */
 public class MethodTest {
 
+    /**
+     * Execute le test de la classe Method
+     */
     public void testAttributes(){
         Method test = new Method("/", "class", "method", "int", 10, 5, 1 );
 

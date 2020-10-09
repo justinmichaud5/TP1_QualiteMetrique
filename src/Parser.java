@@ -6,8 +6,19 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * Classe statique qui contient tout la logique en lien avec le parsing du code java
+ */
 public class Parser {
     // On suppose que les brackets ouverte de la méthode est dans la même ligne
+
+    /**
+     * Lit le fichier en entrée et en ressort un ParsedClass contenant tous les informations pertinante pour les calculs
+     * de métrique du programme
+     *
+     * @param file Le fichier a parse et a examiner
+     * @return Un objet ParsedClass contenant tous les informations necessaire pour evaluer la qualite du code
+     */
     public static ParsedClass parse(File file) {
         boolean test = true;
         Pattern p = Pattern.compile("^(private|protected|public)");
