@@ -30,16 +30,12 @@ public class Main {
         }
 
         String path;
-        if (args.length == 0) {
-            // Initialisation du projet
-            Scanner scanner = new Scanner(System.in);
-            System.out.println("Enter relative path to the java file to scan");
+        // Initialisation du projet
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter relative path to the java file to scan");
 
-            // Input du path cible
-            path = scanner.nextLine();
-        } else {
-            path = args[0];
-        }
+        // Input du path cible
+        path = scanner.nextLine();
 
         System.out.println("Path : " + path + "\n");
 
